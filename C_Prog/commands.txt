@@ -1,0 +1,92 @@
+List of Commands for GProf Profiling-----------
+1. Gprof always comes with the gcc compilers so here we don't need to load the 
+   Gprof Toolkit.
+   
+2. Enter the filename 
+
+3. Now enter the executable filename
+
+4. -pg flaf is used with the gcc compiler so that compler may know it has to run the 
+    gprof profiling toolkit 
+
+5. now executable file should be enter
+
+6. it will genrtate a gmon file which is not in human readable form so we need to    convert it readable format
+
+7. In last step we have converted gmon into readable form 
+
+*******************************************************************
+Reports are attached here in which two parameters will display
+1. Flat Profile
+it will going tell about the below explan parameters
+ %         the percentage of the total running time of the
+time       program used by this function.
+
+cumulative a running sum of the number of seconds accounted
+ seconds   for by this function and those listed above it.
+
+ self      the number of seconds accounted for by this
+seconds    function alone.  This is the major sort for this
+           listing.
+
+calls      the number of times this function was invoked, if
+           this function is profiled, else blank.
+
+ self      the average number of milliseconds spent in this
+ms/call    function per call, if this function is profiled,
+           else blank.
+
+ total     the average number of milliseconds spent in this
+ms/call    function and its descendents per call, if this
+           function is profiled, else blank.
+
+name       the name of the function.  This is the minor sort
+           for this listing. The index shows the location of
+           the function in the gprof listing. If the index is
+           in parenthesis it shows where it would appear in
+           the gprof listing if it were to be printed. 
+
+2. Call graph
+This will explain us about the below mention parameters
+  % time     This is the percentage of the `total' time that was spent
+                in this function and its children.  Note that due to
+                different viewpoints, functions excluded by options, etc,
+                these numbers will NOT add up to 100%.
+
+     self       This is the total amount of time spent in this function.
+
+     children   This is the total amount of time propagated into this
+                function by its children.
+
+     called     This is the number of times the function was called.
+                If the function called itself recursively, the number
+                only includes non-recursive calls, and is followed by
+                a `+' and the number of recursive calls.
+
+     name       The name of the current function.  The index number is
+                printed after it.  If the function is a member of a
+                cycle, the cycle number is printed between the
+                function's name and the index number.
+                
+For the function's parents, the fields have the following meanings:
+
+     self       This is the amount of time that was propagated directly
+                from the function into this parent.
+
+     children   This is the amount of time that was propagated from
+                the function's children into this parent.
+
+     called     This is the number of times this parent called the
+                function `/' the total number of times the function
+                was called.  Recursive calls to the function are not
+                included in the number after the `/'.
+
+     name       This is the name of the parent.  The parent's index
+                number is printed after it.  If the parent is a
+                member of a cycle, the cycle number is printed between
+                the name and the index number.
+                
+                
+
+
+
