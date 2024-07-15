@@ -1,0 +1,10 @@
+kubectl
+YAML file for deployment
+kubectl    run    my-nginx    --image     nginx
+kubectl get pods
+kubectl describe pod my-nginx
+docker ps | grep nginx
+docker exec -it <container id> sh
+hostname
+hostname -i
+curl <ip address of pod>

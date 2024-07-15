@@ -1,0 +1,57 @@
+Cisco Packet Tracer command
+
+2 pc
+2 1841 router
+
+connections between them
+
+
+IN ROUTER0 --> CLI
+Router>enable
+Router#config terminal
+Router(config)#hostname R1
+R1(config)#interface fa0/0
+R1(config-if)#ip address 1.0.0.2 255.255.255.0
+R1(config-if)#no shutdown
+exit
+R1(config)#interface fa0/1
+R1(config-if)#ip address 2.0.0.1 255.255.255.0
+R1(config-if)#no shutdown
+exit
+
+
+R1>enable
+R1#config terminal
+R1(config)#ip route 3.0.0.0 255.255.255.0 2.0.0.2
+
+
+```````````````````````````
+
+IN ROUTER1 --> CLI
+
+Router>enable
+Router#config terminal
+Router(config)#hostname R2
+R2(config)#interface fa0/0
+R2(config-if)#ip address 2.0.0.2 255.255.255.0
+R2(config-if)#no shutdown
+exit
+R2(config)#interface fa0/1
+R2(config-if)#ip address 3.0.0.2 255.255.255.0
+R2(config-if)#no shutdown
+exit
+
+R2>enable
+R2#config terminal
+R2(config)#ip route 1.0.0.0 255.255.255.0 2.0.0.1
+````````````````````````````
+
+IN PC 0 --> CONFIG --> FASTETHERNET0 --> IPV4 ADDRESS --> 1.0.0.1
+IN PC 0 --> CONFIG --> SETTING --> DEFAULT GATEWAY --> 1.0.0.2 
+
+
+IN PC 1 --> CONFIG --> FASTETHERNET0 --> IPV4 ADDRESS --> 3.0.0.1
+IN PC 1 --> CONFIG --> SETTING --> DEFAULT GATEWAY --> 3.0.0.2
+
+SENT ONE BY ONE PACKET TO EACH OTHER
+start simulation

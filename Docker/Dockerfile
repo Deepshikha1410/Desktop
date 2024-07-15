@@ -1,9 +1,6 @@
-FROM openjdk:17
+FROM nginx:alpine
 
-WORKDIR /app
+COPY index.html /usr/share/nginx/html/
 
-COPY . /app
 
-RUN javac HelloWorld.java
 
-CMD ["java","HelloWorld.java"] 

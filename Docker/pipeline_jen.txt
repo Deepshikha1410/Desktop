@@ -1,0 +1,60 @@
+first git hub project
+create repo 
+git init
+git add *
+git commit -m "
+git branch -M main
+git remote add origin 
+
+
+brew service start Jenkins-lts
+go to local host 8080
+login
+GitHub project
+add GitHub project url
+
+pipeline{
+       agent any
+       tools{
+            maven 'maven_3.5_0'
+        }
+         stages{
+               stage('Build maven')
+                    steps(
+                          
+                     sh'mvm clean install'
+                     }  
+                }
+           }
+}
+
+for steps under go to pipeline syntax checkout and then git repo url past there and generate repo
+
+
+
+
+improve the script for ddocker
+stage('build docker image')
+     steps{
+         script{
+                 sh 'docker build -t imagename'
+                  }
+           }
+   }
+}
+
+
+push docker image to hub add new 
+stage('push image to hub'
+   steps{
+         script{
+               search in pipeline syntax for web credential
+                  variable dockerpwd
+                   in secret give password of dockerhub}
+                     sh 'docker login -u username -p $(dockervariable)
+}
+                     sh 'docker push image name
+}
+}
+
+         

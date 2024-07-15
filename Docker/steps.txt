@@ -1,0 +1,26 @@
+docker build -t doc_username/html:v1 .
+
+docker run -p 8086:80 doc_username/html:v1
+
+
+
+````````````````````````
+Dockerfile
+----
+FROM nginx:alpine
+COPY index.html /usr/share/nginx/html/
+
+```````````````````````
+index.html
+
+<html>
+<head>
+<title>TEST CDAC</title>
+</head>
+<body>
+<h1>GOODMORNING</h1>
+<h5>HELLO</h2>
+</body>
+</html>
+
+```````````````````````````````````

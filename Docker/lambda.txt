@@ -1,0 +1,25 @@
+lambda role s3
+create role
+aws service
+select lambda
+amazon s3 full access
+role details
+give name
+created role
+add permission
+attach policy
+aws lambda
+full access
+search for lambda
+create function
+fiunction name
+python 3.12
+arm x86-64
+use existing role
+add trigger
+bucket
+link copy
+lambda function - left side corner
+copy
+paste
+deploy

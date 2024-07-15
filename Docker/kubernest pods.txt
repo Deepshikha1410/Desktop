@@ -1,0 +1,82 @@
+#####################create java file and put it to GitHub 
+Write the Java Code
+Compile and Run
+Move to GitHub
+Modify the Message
+Commit and Push Changes
+Verify on GitHub
+
+#########crerate kubernets pods
+first create java file
+public class HelloWorld {
+
+  public static void main(String[] args) {
+    System.out.println("Hello World!");
+  }
+}
+########################
+then create dockerfi;e
+FROM openjdk:17-slim
+
+WORKDIR /app
+
+COPY hello-world.java .
+
+CMD ["javac", "hello-world.java"]
+CMD ["java", "HelloWorld"]
+
+build the docker
+docker build -t hello-world:latest .
+
+Deployment (deployment.yaml):
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-world-deployment
+spec:
+  replicas: 5  # Run 5 pods
+  selector:
+    matchLabels:
+      app: hello-world
+  template:
+    metadata:
+      labels:
+        app: hello-world
+    spec:
+      containers:
+      - name: hello-world
+        image: hello-world:latest
+        port:
+        - containerPort: 8080
+
+## Create the Deployment:
+kubectl apply -f deployment.yaml
+
+#########Service (service.yaml):
+apiVersion: v1
+kind: Service
+metadata:
+  name: hello-world-service
+spec:
+  selector:
+    app: hello-world
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 8080
+  type: LoadBalancer  # Exposes service externally (optional)
+
+#######
+Create the Service:
+
+kubectl apply -f service.yaml
+ 
+#############3
+Verify Pods:
+
+List running pods:
+
+kubectl get pods
+
+
+
