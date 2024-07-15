@@ -1,0 +1,53 @@
+EC2 steps (Amazon AWS)
+
+1) search Ec2 in aws search bar
+2) when open the ec2 click on launch instance
+3) write instance name in name text box
+4) when scroll down there are many options for selecting the quick start you choose one that of all which given otherwise choose (Amazon aws)
+5) Key pair --> write key pair name (any name )
+6) in Network setting --> click on a)create security group b)click on check box --> alllow SSh traffic from c)click on check box --> allow traffic from the internet
+7) in advance setting --> chose file in that empty box your script file should be paste which is given below
+script file
+#!/bin/bash
+# Use this for your user data (script from top to bottom)
+# install httpd (Linux 2 version)
+yum update -y
+yum install -y httpd
+systemctl start httpd
+systemctl enable httpd
+echo "<h1>Hello World from $(hostname -f)</h1>" > /var/www/html/index.html
+
+8) click on Launch instance
+9) in green color success launce massage shown on dashboard
+10)in that green succes massage click on number 
+11) click on same number then url generated after that url getting remove s from https that url
+12)then in browser you run that url after removing the s from https
+
+EC2 steps for(ubuntu)
+
+
+1) search Ec2 in aws search bar
+2) when open the ec2 click on launch instance
+3) write instance name in name text box
+4) when scroll down there are many options for selecting the quick start you choose one that of all which given otherwise choose (ubuntu)
+5) Key pair --> write key pair name (any name )
+6) in Network setting --> click on a)create security group b)click on check box --> alllow SSh traffic from c)click on check box --> allow traffic from the internet
+7) in advance setting --> chose file in that empty box your script file should be paste which is given below
+script file
+#!/bin/bash
+# Use this for your user data (script from top to bottom)
+# install httpd (Linux 2 version)
+sudo apt update -y
+sudo apt install httpd -y
+systemctl start httpd
+systemctl enable httpd
+echo "<h1>Hello World from $(hostname -f)</h1>" > /var/www/html/index.html
+
+8) click on Launch instance
+9) in green color success launce massage shown on dashboard
+10)in that green succes massage click on number 
+11) click on same number then url generated after that url getting remove s from https that url
+12)then in browser you run that url after removing the s from https
+
+
+	

@@ -1,0 +1,47 @@
+Docker Run command  -command is used to run a container from an image,The docker run command is a combination of the docker create and docker start commands. It creates a new container from the image specified and starts that container.
+\\$ docker run <image_name>
+\\To give name of container
+\\$ docker run --name <container_name> <image_name>
+
+Docker Pull - This command allows you to pull any image which is present in the official registry of docker, Docker hub
+$ docker pull <image_name>
+
+Docker PS
+This command (by default) shows us a list of all the running containers. We can use various flags with it.
+-a flag:  shows us all the containers, stopped or running.
+-l flag: shows us the latest container.
+-q flag: shows only the Id of the containers. 
+\\\$ docker ps [options..]
+
+Docker Stop
+This command allows you to stop a container if it has crashed or you want to switch to another one.
+$ docker stop <container_ID>
+
+
+Docker Start
+Suppose you want to start the stopped container again, you can do it with the help of this command.
+\\\$ docker start <container_ID>
+
+
+Docker rm
+To delete a container.You can either mention the container name or its ID.
+Some important flags:
+-f flag: remove the container forcefully.
+-v flag: remove the volumes.
+-l flag: remove the specific link mentioned.
+$ docker rm {options} <container_name or ID>
+
+
+Docker Images
+Lists all the pulled images which are present in our system.
+$ docker images
+
+
+Docker exec
+This command allows us to run new commands in a running container. This command only works until the container is running, after the container restarts, this command does not restart.
+Some important flags:
+-d flag: for running the commands in the background.
+-i flag: it will keep STDIN open even when not attached.
+-e flag: sets the environment variables 
+
+

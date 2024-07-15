@@ -1,0 +1,29 @@
+1)vim GitRepo.java
+2)javac GitRepo.java
+3)java GitRepo
+ create one git repo on your git account 
+4)git config --global user.name "write here your git username"/git config --global user.name Kmaroti
+5)git config --global user.email "write here your git Email"/git config --global user.emailmaroti.kasbe26@gmail.com
+6)git init
+7)git add *
+8)git commit -m "This is my first git repo"
+9)git show
+10)git branch -M main
+11)git remote add origin copy here your git repo url https://github.com/Kmaroti/mygitrepo.git
+12)git push -u origin main
+	a)generate git token
+	b)write your git username
+	c)paste that git generated token
+
+you want to make changes then do the below command otherwise don't do this above steps are complete
+
+1)vim GitRepo.java
+2)javac GitRepo.java
+3)java GitRepo
+4)git add *
+5)git commit -m "This is my Second git repo"
+6)git push
+	a)write your username of git
+	b)put your git token in the password
+
+

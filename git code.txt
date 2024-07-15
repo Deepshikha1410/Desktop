@@ -1,0 +1,23 @@
+git 
+
+mkdir dict 
+vim java
+javac filename.java
+git init
+git add *
+git commit -m "comment"
+git show
+git branch -M main
+git branch 
+git branch -M main
+git branch
+git push -u origin main
+git remote add origin https://github.com/Deepshikha1410/git_new.gi
+git push -u origin main
+git remote add origin https://github.com/Deepshikha1410/git_new.git
+
+git username 
+Deepshikha1410
+git password 
+Token number
+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
